@@ -1,16 +1,39 @@
 /* Ínicio - Estilização da Header */
+@import url(https://fonts.google.com/specimen/Barlow?category=Serif,Sans+Serif,Display,Monospace);
+
+body{
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+}
 
 header h1{
     font-size: 50px;
+    
 }
+
 header{
     color: aliceblue;
     background: #1a1e26;
     top: 0;
-    text-align: center;
     padding: 20px;
     position: fixed;
     width: 100%;
+
+}
+
+#nome-empresa{
+    display: inline-flex;
+    position: float;
+}
+
+#nav{
+    padding: 0px 0px 0px 300px;
+    display: inline-flex;
+}
+#nav li{
+    display: inline-flex;
+    padding: 10px;
+    font: 30px bolder;
 }
 
 
