@@ -1,0 +1,27 @@
+/* Ínicio - Estilização da Header */
+
+header h1{
+    font-size: 50px;
+}
+header{
+    color: aliceblue;
+    background: #1a1e26;
+    top: 0;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+
+
+/* Fim - Estilização da Header */
+
+/* Ínicio - Estilização da Main */
+
+main{
+    padding: 100px 0px 0px 0px ;
+    font-size: 25px;
+}
+
+/* Fim - Estilização da Main */
