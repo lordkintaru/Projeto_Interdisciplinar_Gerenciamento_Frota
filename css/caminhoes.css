@@ -39,3 +39,16 @@ header{
 
 
 /* Fim - Estilização da Header */
+
+
+/* Ínicio - Estilização do Main */
+main{
+    padding: 100px 0px 0px 0px;
+}
+
+table, tr, tbody, th, thead{
+    border: 5px solid;
+}
+
+
+/* Fim - Estilização do Main */
