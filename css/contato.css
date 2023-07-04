@@ -1,41 +1,27 @@
-/* Ínicio - Estilização da Header */
-@import url(https://fonts.google.com/specimen/Barlow?category=Serif,Sans+Serif,Display,Monospace);
-
-body{
-    font-family: 'Barlow', sans-serif;
-    text-align: center;
-}
-
-header h1{
-    font-size: 50px;
+ 
     
-}
-
-header{
-    color: aliceblue;
-    background: #1a1e26;
-    top: 0;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-
-}
-
-#nome-da-empresa{
-    display: inline-flex;
-    position: float;
-}
-
-#barra-de-navegacao{
-    padding: 0px 0px 0px 300px;
-    display: inline-flex;
-}
-#barra-de-navegacao li{
-    display: inline-flex;
-    padding: 10px;
-    font: 30px bolder;
-}
-
-
-
-/* Fim - Estilização da Header */
+      
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 40%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      
+      input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #555;
+      }
