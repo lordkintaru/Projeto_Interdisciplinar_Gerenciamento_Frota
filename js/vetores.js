@@ -12,10 +12,9 @@ for (let i = 0; i< vetConsumo
     .length; i++) {
 
     var kmL = vetKM[i]/vetConsumo[i];
-    vetMedia.push(kmL);
+    vetMedia.push(kmL.toFixed(2));
 
 }
 
-//Exportando os vetores para outros arquivos JS.
 
 

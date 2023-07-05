@@ -39,8 +39,10 @@
 
         <div>
 
-            <select>
-                <option value="" disabled selected></option>
+            <select id="sltTabelas">
+                <option value=""selected>Todos os caminhões</option>
+                <option value="distancia">Maior distância percorrida</option>
+                <option value="consumo">Menor consumo médio </option>
                 <option></option>
             </select>
                 
@@ -48,14 +50,14 @@
                 <thead>
                     <tr>
                         <th>Placa</th>
-                        <th>Distância pecorrida</th>
+                        <th>Distância percorrida</th>
                         <th>Combustível consumido</th>
-                        <th>Comsumo Médio(Km/L)</th>
+                        <th>Consumo Médio(Km/L)</th>
                     </tr>
                 </thead>
-                <tbody>
-                
-            
+                <tbody id="tbCaminhoes">
+                   
+                    
                 </tbody>
             </table>
 
