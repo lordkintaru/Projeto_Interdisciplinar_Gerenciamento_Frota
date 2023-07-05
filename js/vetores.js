@@ -12,7 +12,7 @@ for (let i = 0; i< vetConsumo
     .length; i++) {
 
     var kmL = vetKM[i]/vetConsumo[i];
-    vetMedia.push(kmL.toFixed(2));
+    vetMedia.push(kmL);
 
 }
 

@@ -9,22 +9,20 @@ sltTabelas.addEventListener("change", analisarTabela);
 
 //Função de tabela;
 function analisarTabela() {
-
-
-    //Variável referênciando uma constante;
-    var tabela = sltTabelas.value;
-   
-
+    //Limpando as tabelas;
+    limparTabela();
+    //Declaração de varíaveis referênciando constantes;
+    tabela = sltTabelas.value;
     //Estrutura de opções;
     switch (tabela) {
 
         case "distancia":
-            alert("deu certo ")
+           
 
             break;
 
         case "consumo":
-            alert("deu certo ")
+            compararConsumoMedio()
 
             break;
 
@@ -39,13 +37,30 @@ function analisarTabela() {
     }
 }
 
+//Função de comparação de consumo médio;
+function compararConsumoMedio() {
+    //Criando a varíavel de comparação;
+    var menorConsumo = 0
+    //Varíavel de de posição;
+    var posicao = 0;
+    //Estrutura de repetição com comparação;
+    for (let i = 0; i < vetMedia.length; i++) {
+
+        if (menorConsumo < vetMedia[i]) {
+            menorConsumo = vetMedia[i];
+            posicao = i
+        }
+    }
+    
+}
+
 //Função de criação de tabela;
 function criarTabela() {
+
+
+    tbCaminhoes.innerHTML = "";
     //Estrutura de repetição para criação da tabela.
     for (let i = 0; i < vetPlaca.length; i++) {
-
-        //Elemento seletor do corpo da tabela;
-        var tbody = document.querySelector("tbody");
 
         //Criação de váriaveis criadoras de elementos; 
         var placa = document.createElement("td");
@@ -58,16 +73,19 @@ function criarTabela() {
         placa.innerHTML = vetPlaca[i];
         km.innerHTML = vetKM[i];
         consumo.innerHTML = vetConsumo[i];
-        media.innerHTML = vetMedia[i];
+        media.innerHTML = vetMedia[i].toFixed(2);
 
         //Organização para a inserção da tabela no HTML;
         tr.appendChild(placa);
         tr.appendChild(km);
         tr.appendChild(consumo);
         tr.appendChild(media);
-        tbody.appendChild(tr);
+        tbCaminhoes.appendChild(tr);
     }
 }
-
+//Função de Limpeza de tabela;
+function limparTabela(){
+    tbCaminhoes.innerHTML = "";
+}
 
 
