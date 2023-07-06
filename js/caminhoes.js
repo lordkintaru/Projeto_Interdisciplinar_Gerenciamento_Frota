@@ -2,10 +2,12 @@
 const sltTabelas = document.getElementById("sltTabelas");
 const tbCaminhoes = document.getElementById("tbCaminhoes");
 const outBarraPesquisa = document.getElementById("outBarraPesquisa");
+const inBarraPesquisa = document.getElementById("inBarraPesquisa");
 
 //Adicionando receptores de eventos;
 document.addEventListener("DOMContentLoaded", analisarTabela);
 sltTabelas.addEventListener("change", analisarTabela);
+inBarraPesquisa.addEventListener("")
 
 
 //Função de tabela;
@@ -102,9 +104,10 @@ function criarTabela() {
         tbCaminhoes.appendChild(tr);
     }
     //Criando uma barra de pesquisa;
-    var barraPesquisa = document.createElement("input");
+    var inBarraPesquisa = document.createElement("input");
     barraPesquisa.type = "text";
-    barraPesquisa.id = "barraPesquisa";
-    outBarraPesquisa.appendChild(barraPesquisa);
+    barraPesquisa.id = "inBarraPesquisa";
+    barraPesquisa.placeholder = "Procure o caminhão aqui!"
+    outBarraPesquisa.appendChild(inBarraPesquisa);
 
 }
