@@ -1,28 +1,31 @@
 //Referênciação de elementos do documento HTML para constante; 
 const sltTabelas = document.getElementById("sltTabelas");
 const tbCaminhoes = document.getElementById("tbCaminhoes");
-
+const outBarraPesquisa = document.getElementById("outBarraPesquisa");
 
 //Adicionando receptores de eventos;
 document.addEventListener("DOMContentLoaded", analisarTabela);
 sltTabelas.addEventListener("change", analisarTabela);
 
+
 //Função de tabela;
 function analisarTabela() {
     //Limpando as tabelas;
-    limparTabela();
+    tbCaminhoes.innerHTML = "";
+    //Limpando campo de pesquisa;
+    outBarraPesquisa.innerHTML = "";
     //Declaração de varíaveis referênciando constantes;
     tabela = sltTabelas.value;
     //Estrutura de opções;
     switch (tabela) {
 
         case "distancia":
-           
+
 
             break;
 
         case "consumo":
-            compararConsumoMedio()
+            compararConsumoMedio();
 
             break;
 
@@ -40,7 +43,7 @@ function analisarTabela() {
 //Função de comparação de consumo médio;
 function compararConsumoMedio() {
     //Criando a varíavel de comparação;
-    var menorConsumo = 0
+    var menorConsumo = 0;
     //Varíavel de de posição;
     var posicao = 0;
     //Estrutura de repetição com comparação;
@@ -48,17 +51,33 @@ function compararConsumoMedio() {
 
         if (menorConsumo < vetMedia[i]) {
             menorConsumo = vetMedia[i];
-            posicao = i
+            posicao = i;
         }
     }
-    
+    //Criação de váriaveis criadoras de elementos; 
+    var placa = document.createElement("td");
+    var km = document.createElement("td");
+    var consumo = document.createElement("td");
+    var media = document.createElement("td");
+    var tr = document.createElement("tr");
+
+    //Atribuindo os textos para as varíaveis;
+    placa.innerHTML = vetPlaca[posicao];
+    km.innerHTML = vetKM[posicao];
+    consumo.innerHTML = vetConsumo[posicao];
+    media.innerHTML = vetMedia[posicao].toFixed(2);
+
+    //Organização para a inserção da tabela no HTML;
+    tr.appendChild(placa);
+    tr.appendChild(km);
+    tr.appendChild(consumo);
+    tr.appendChild(media);
+    tbCaminhoes.appendChild(tr);
 }
 
-//Função de criação de tabela;
+//Função de criação de tabela e barra de pesquisa;
 function criarTabela() {
 
-
-    tbCaminhoes.innerHTML = "";
     //Estrutura de repetição para criação da tabela.
     for (let i = 0; i < vetPlaca.length; i++) {
 
@@ -82,10 +101,10 @@ function criarTabela() {
         tr.appendChild(media);
         tbCaminhoes.appendChild(tr);
     }
-}
-//Função de Limpeza de tabela;
-function limparTabela(){
-    tbCaminhoes.innerHTML = "";
-}
+    //Criando uma barra de pesquisa;
+    var barraPesquisa = document.createElement("input");
+    barraPesquisa.type = "text";
+    barraPesquisa.id = "barraPesquisa";
+    outBarraPesquisa.appendChild(barraPesquisa);
 
-
+}
