@@ -24,3 +24,7 @@ aside {
     line-height: 1.5;
     margin-bottom: 10px;
   }
+  .texto_sobre{
+    margin: auto;
+    width: 70%;
+  }

@@ -1,5 +1,6 @@
 
 main {
+  padding: 2% auto;
 margin-left: 200px
   }
   
@@ -8,10 +9,10 @@ margin-left: 200px
     border-collapse: collapse;
     width: 90%;
   }
-  
+
   th,
   td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
   }
   
@@ -29,6 +30,7 @@ margin-left: 200px
     font-size: 16px;
   }
   
-  div {
-    padding: 20px;
-  }
+.selecao, .pesquisa{
+  border-radius: 45px;
+margin: 15px;
+}

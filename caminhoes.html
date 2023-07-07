@@ -17,35 +17,30 @@
     <header>
         <img class="Logo" src="imagens/Logo.png" alt="">
         <section class="opcoes_laterais">
-       
+
             <nav>
-          
+                <div class="menu">
 
-                <div>
-
-              
                     <ul id="barra-de-navegacao">
-                        <li><a href="index.html">SOBRE NÓS</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="caminhoes.html">CAMINHÕES</a></li>
                         <li><a href="contato.html">FALE CONOSCO</a></li>
                     </ul>
-
                 </div>
-
-            </nav>
+           </nav>
         </section>
     </header>
     <main>
 
-        <div>
+        <div class="conteudo">
 
-            <select id="sltTabelas">
-                <option value=""selected>Todos os caminhões</option>
+            <select id="sltTabelas" class="selecao">
+                <option value="" selected>Todos os caminhões</option>
                 <option value="distancia">Maior distância percorrida</option>
-                <option value="consumo">Menor consumo médio </option>
+                <option value="consumo">Menor consumo médio</option>
                 <option></option>
             </select>
-            <p id="outBarraPesquisa"></p>
+            <p id="outBarraPesquisa" class="pesquisa"></p>
             <table>
                 <thead>
                     <tr>
@@ -55,9 +50,9 @@
                         <th>Consumo Médio(Km/L)</th>
                     </tr>
                 </thead>
-                <tbody id = "tbCaminhoes">
-                   
-                    
+                <tbody id="tbCaminhoes">
+
+
                 </tbody>
             </table>
 
@@ -68,6 +63,7 @@
     <footer>
 
     </footer>
+
 
     <script src="/js/vetores.js"></script>
     <script src="/js/caminhoes.js"></script>
