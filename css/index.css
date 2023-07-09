@@ -6,7 +6,7 @@ aside {
   }
   
   main {
-    margin-left: 200px;
+ 
     padding: 20px;
   }
   
@@ -28,3 +28,34 @@ aside {
     margin: auto;
     width: 70%;
   }
+ 
+  
+  .carrocel {
+    border-radius: 25px;
+    margin: 20px auto;
+    display: flex;
+    overflow: hidden;
+    width: 50%; /* Define a largura do carrossel */
+  }
+  
+  .carrocel img {
+    width: 100%; /* Redimensiona as imagens para ocuparem a largura do carrossel */
+    height: auto; /* Mantém a proporção original das imagens */
+    transition: transform 1s; /* Adiciona uma transição suave */
+  }
+  
+  /* Adiciona animação para mover as imagens */
+  @keyframes carousel-animation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Define a velocidade da animação */
+  .carrocel img {
+    animation: carousel-animation 12s linear infinite;
+  }
+  

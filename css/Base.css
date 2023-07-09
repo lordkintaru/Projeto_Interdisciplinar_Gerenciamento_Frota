@@ -1,44 +1,40 @@
 /* Ínicio - Estilização da Header */
 @import url(https://fonts.google.com/specimen/Barlow?category=Serif,Sans+Serif,Display,Monospace);
-
-body{
+body {
     font-family: 'Barlow', sans-serif;
     text-align: center;
 }
 
+.Logo {
+margin: 20px;
 
-.Logo{
-width: 90%;
-margin: 10% auto;
 }
-header{
+
+header {
     color: aliceblue;
     background: #3d4073;
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 200px;
+}
+#barra-de-navegacao {
     justify-content: center;
-    height: 100vh;
-    width: 200px;
-    position: fixed;
-
-}
-#barra-de-navegacao{
-    margin: 50% auto;
-    text-decoration: none; 
+    margin: 20% auto;
     color: aliceblue;
-    align-items: center;
-    list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+  
 }
-#barra-de-navegacao a{
-    
-    text-decoration: none; 
+
+#barra-de-navegacao a {
+    margin: auto;
+    text-decoration: none;
     color: aliceblue;
     display: inline-flex;
     padding: 10px;
     font: 18px bolder;
+}
+.opcoes_laterais{
+   margin-left: 40%; 
 }
 
 
