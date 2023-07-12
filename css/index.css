@@ -44,7 +44,8 @@ p {
 
 /* Estilos para as imagens dos slides */
 .slide img {
-  width: 85%;
+  border-radius: 15px;
+  width: 100%;
 }
 
 /* Estilos para os botões de navegação automática */
@@ -85,14 +86,13 @@ p {
   background-color: #080fdf89;
 }
 /* Estilize o botão selecionado */
-.manual-btn:checked {
+.navegacao_Manual:checked::before {
  
   margin: -10px 7px ;
   background-color: #080fdf;
   border: 2px solid #080fdf;
  
-  cursor: pointer;
-  transition: 1s;
+
 }
 
 /* Oculte os botões de rádio */
