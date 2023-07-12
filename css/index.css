@@ -28,34 +28,45 @@ aside {
     margin: auto;
     width: 70%;
   }
- 
-  
   .carrocel {
-    border-radius: 25px;
-    margin: 20px auto;
     display: flex;
-    overflow: hidden;
-    width: 50%; /* Define a largura do carrossel */
+    overflow-x: hidden;
+    animation: slide 5s infinite;
   }
   
   .carrocel img {
-    width: 100%; /* Redimensiona as imagens para ocuparem a largura do carrossel */
-    height: auto; /* Mantém a proporção original das imagens */
-    transition: transform 1s; /* Adiciona uma transição suave */
+    width: 50%; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 10px; /* Espaçamento entre as imagens */
   }
   
-  /* Adiciona animação para mover as imagens */
-  @keyframes carousel-animation {
+  @keyframes slide {
     0% {
       transform: translateX(0);
     }
-    100% {
+    20% {
+      transform: translateX(0);
+    }
+    25% {
       transform: translateX(-100%);
     }
-  }
-  
-  /* Define a velocidade da animação */
-  .carrocel img {
-    animation: carousel-animation 12s linear infinite;
+    45% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+    70% {
+      transform: translateX(-100%);
+    }
+    75% {
+      transform: translateX(-200%);
+    }
+    95% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
   }
   

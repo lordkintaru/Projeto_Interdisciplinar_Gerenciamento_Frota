@@ -5,9 +5,11 @@ main {
   }
   
   table {
+    background-color: #3d407300;
+    border-radius: 25px;
     margin:  0 auto;
     border-collapse: collapse;
-    width: 90%;
+    width: 950px;
   }
 
   th,
@@ -17,15 +19,15 @@ main {
   }
   
   th {
-    background-color: #f2f2f2;
+    background-color: #c5ffee;
   }
   
   tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #e9fff8;
   }
   
   select {
-    width: 95%;
+    width: 30%;
     padding: 8px;
     font-size: 16px;
   }

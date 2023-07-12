@@ -1,9 +1,12 @@
 /* Ínicio - Estilização da Header */
 @import url(https://fonts.google.com/specimen/Barlow?category=Serif,Sans+Serif,Display,Monospace);
-body {
+html, body {
     font-family: 'Barlow', sans-serif;
     text-align: center;
-}
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
 .Logo {
 margin: 20px;
@@ -15,7 +18,7 @@ header {
     background: #3d4073;
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 150px;
 }
 #barra-de-navegacao {
     justify-content: center;
@@ -36,7 +39,47 @@ header {
 .opcoes_laterais{
    margin-left: 40%; 
 }
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .content {
+    flex: 1;
+  }
+
+footer {
+    color: white;
+    padding: 20px;
+    height: 320px;
+    /* min-height: 100%; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+ 
+  .footer-texto p {
+    margin:5px 0;
+  }
+
+  .redes-sociais a {
+    color: white;
+    margin-right: 10px;
+  }
+
+  .contato p {
+    margin: 5px 0;
+  }
+
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
 
 
 
