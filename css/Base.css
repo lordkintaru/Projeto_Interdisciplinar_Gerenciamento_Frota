@@ -1,5 +1,4 @@
-/* Ínicio - Estilização da Header */
-@import url(https://fonts.google.com/specimen/Barlow?category=Serif,Sans+Serif,Display,Monospace);
+
 html, body {
     font-family: 'Barlow', sans-serif;
     text-align: center;
@@ -12,6 +11,7 @@ html, body {
 margin: 20px;
 
 }
+/* Ínicio - Estilização da Header */
 
 header {
     color: aliceblue;

@@ -1,72 +1,93 @@
 
-aside {
-    width: 200px;
-    background-color: #f1f1f1;
-    padding: 20px;
-  }
-  
-  main {
- 
-    padding: 20px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  .texto_sobre{
-    margin: auto;
-    width: 70%;
-  }
-  .carrocel {
-    display: flex;
-    overflow-x: hidden;
-    animation: slide 5s infinite;
-  }
-  
-  .carrocel img {
-    width: 50%; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    margin-right: 10px; /* Espaçamento entre as imagens */
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    20% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-100%);
-    }
-    45% {
-      transform: translateX(-100%);
-    }
-    50% {
-      transform: translateX(-100%);
-    }
-    70% {
-      transform: translateX(-100%);
-    }
-    75% {
-      transform: translateX(-200%);
-    }
-    95% {
-      transform: translateX(-200%);
-    }
-    100% {
-      transform: translateX(-200%);
-    }
-  }
-  
+main {
+
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.texto_sobre {
+  margin: auto;
+  width: 70%;
+}
+
+/* Estilos para o container principal */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Estilos para os slides */
+.slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+/* Estilos para as imagens dos slides */
+.slide img {
+  width: 80%;
+}
+
+/* Estilos para os botões de navegação automática */
+.auto_navegacao {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.auto_navegacao div {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: auto 15px;
+  cursor: pointer;
+}
+
+/* Estilos para os botões de navegação manual */
+.navegacao_Manual {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.manual-btn {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #080fdf;
+  border-radius: 50%;
+  display: inline-block;
+  margin: -50px 7px ;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn:hover{
+  background-color: #080fdf89;
+}
+/* Estilize o botão selecionado */
+.manual-btn:checked {
+  background-color: #555;
+}
+
+/* Oculte os botões de rádio */
+input[type="radio"] {
+  display: none;
+}
