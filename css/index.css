@@ -26,6 +26,7 @@ p {
 
 /* Estilos para o container principal */
 .slider {
+  margin-bottom: 3%;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -43,7 +44,7 @@ p {
 
 /* Estilos para as imagens dos slides */
 .slide img {
-  width: 80%;
+  width: 85%;
 }
 
 /* Estilos para os botões de navegação automática */
@@ -70,12 +71,13 @@ p {
 }
 
 .manual-btn {
+
   width: 10px;
   height: 10px;
   border: 2px solid #080fdf;
   border-radius: 50%;
   display: inline-block;
-  margin: -50px 7px ;
+  margin:  auto 7px ;
   cursor: pointer;
   transition: 1s;
 }
@@ -84,7 +86,13 @@ p {
 }
 /* Estilize o botão selecionado */
 .manual-btn:checked {
-  background-color: #555;
+ 
+  margin: -10px 7px ;
+  background-color: #080fdf;
+  border: 2px solid #080fdf;
+ 
+  cursor: pointer;
+  transition: 1s;
 }
 
 /* Oculte os botões de rádio */
