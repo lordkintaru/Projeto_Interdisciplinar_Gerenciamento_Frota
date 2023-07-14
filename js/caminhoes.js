@@ -1,11 +1,13 @@
 //Referênciação de elementos do documento HTML para constante; 
 const sltTabelas = document.getElementById("sltTabelas");
 const tbCaminhoes = document.getElementById("tbCaminhoes");
-const outBarraPesquisa = document.getElementById("outBarraPesquisa");
+const divPesquisa = document.getElementById("divPesquisa");
+const barraPesquisa = document.getElementById("barraPesquisa");
 
 //Adicionando receptores de eventos;
 document.addEventListener("DOMContentLoaded", analisarTabela);
 sltTabelas.addEventListener("change", analisarTabela);
+
 
 
 //Função de tabela;
@@ -13,7 +15,7 @@ function analisarTabela() {
     //Limpando as tabelas;
     tbCaminhoes.innerHTML = "";
     //Limpando campo de pesquisa;
-    outBarraPesquisa.innerHTML = "";
+    divPesquisa.innerHTML = "";
     //Declaração de varíaveis referênciando constantes;
     tabela = sltTabelas.value;
     //Estrutura de opções;
@@ -105,6 +107,45 @@ function criarTabela() {
     var barraPesquisa = document.createElement("input");
     barraPesquisa.type = "text";
     barraPesquisa.id = "barraPesquisa";
-    outBarraPesquisa.appendChild(barraPesquisa);
+    barraPesquisa.placeholder = "Procurar placa..."
+    barraPesquisa.addEventListener("keyup", procurarCaminhao);
+    divPesquisa.appendChild(barraPesquisa);
+
+    function procurarCaminhao() {
+
+        var valorPesquisa = barraPesquisa.value.toUpperCase();
+        //Limpando as tabelas;
+        tbCaminhoes.innerHTML = "";
+
+        for (let i = 0; i < vetPlaca.length; i++) {
+            if (vetPlaca[i].includes(valorPesquisa)) {
+                //Criação de váriaveis criadoras de elementos; 
+                var placa = document.createElement("td");
+                var km = document.createElement("td");
+                var consumo = document.createElement("td");
+                var media = document.createElement("td");
+                var tr = document.createElement("tr");
+
+                //Atribuindo os textos para as varíaveis;
+                placa.innerHTML = vetPlaca[i];
+                km.innerHTML = vetKM[i];
+                consumo.innerHTML = vetConsumo[i];
+                media.innerHTML = vetMedia[i].toFixed(2);
+
+                //Organização para a inserção da tabela no HTML;
+                tr.appendChild(placa);
+                tr.appendChild(km);
+                tr.appendChild(consumo);
+                tr.appendChild(media);
+                tbCaminhoes.appendChild(tr);
+            } else {
+
+
+            }
+
+        }
+
+
+    }
 
 }
