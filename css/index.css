@@ -1,61 +1,135 @@
+main {
 
-aside {
-    width: 200px;
-    background-color: #f1f1f1;
-    padding: 20px;
+  padding: 20px;
+}
+
+section {
+
+  margin-bottom: 20px;
+}
+
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+
+.sobre {
+  margin: auto;
+  width: 70%;
+}
+
+/* Estilos para o container principal */
+.slider {
+  margin-bottom: 3%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Estilos para os slides */
+.slides {
+  display: flex;
+  transition: transform 3s ease-in-out;
+  animation: autoSlide 60s infinite;
+  /* Altere a duração da animação conforme necessário */
+}
+
+@keyframes autoSlide {
+  0% {
+    transform: translateX(0);
   }
-  
-  main {
- 
-    padding: 20px;
+
+  10% {
+    transform: translateX(-100%);
   }
-  
-  section {
-    margin-bottom: 20px;
+
+  20% {
+    transform: translateX(-200%);
   }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+
+  30% {
+    transform: translateX(-300%);
   }
-  
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+
+  40% {
+    transform: translateX(-400%);
   }
-  .texto_sobre{
-    margin: auto;
-    width: 70%;
+
+  50% {
+    transform: translateX(-500%);
   }
- 
-  
-  .carrocel {
-    border-radius: 25px;
-    margin: 20px auto;
-    display: flex;
-    overflow: hidden;
-    width: 50%; /* Define a largura do carrossel */
+
+  60% {
+    transform: translateX(-600%);
   }
-  
-  .carrocel img {
-    width: 100%; /* Redimensiona as imagens para ocuparem a largura do carrossel */
-    height: auto; /* Mantém a proporção original das imagens */
-    transition: transform 1s; /* Adiciona uma transição suave */
+
+  70% {
+    transform: translateX(-700%);
   }
-  
-  /* Adiciona animação para mover as imagens */
-  @keyframes carousel-animation {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+
+  80% {
+    transform: translateX(-800%);
   }
-  
-  /* Define a velocidade da animação */
-  .carrocel img {
-    animation: carousel-animation 12s linear infinite;
+
+  90% {
+    transform: translateX(-900%);
   }
-  
+
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+/* Estilos para as imagens dos slides */
+.slide img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+/* Estilos para os botões de navegação manual */
+.navegacao_Manual {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.manual-btn {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #080fdf;
+  border-radius: 50%;
+  margin: 0 7px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.manual-btn:hover {
+  background-color: #080fdf89;
+}
+
+/* Estilize o botão selecionado */
+input[type="radio"]:checked+.slides .slide {
+  transform: translateX(-100%);
+}
+
+input[type="radio"] {
+  display: none;
+}
