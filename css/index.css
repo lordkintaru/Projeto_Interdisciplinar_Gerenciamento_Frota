@@ -23,7 +23,6 @@ p {
   margin: auto;
   width: 70%;
 }
-
 /* Estilos para o container principal */
 .slider {
   margin-bottom: 3%;
@@ -35,7 +34,44 @@ p {
 /* Estilos para os slides */
 .slides {
   display: flex;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 3s ease-in-out;
+  animation: autoSlide 60s infinite; /* Altere a duração da animação conforme necessário */
+}
+
+@keyframes autoSlide {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-200%);
+  }
+  30% {
+    transform: translateX(-300%);
+  }
+  40% {
+    transform: translateX(-400%);
+  }
+  50% {
+    transform: translateX(-500%);
+  }
+  60% {
+    transform: translateX(-600%);
+  }
+  70% {
+    transform: translateX(-700%);
+  }
+  80% {
+    transform: translateX(-800%);
+  }
+  90% {
+    transform: translateX(-900%);
+  }
+  100% {
+    transform: translateX(-1000%);
+  }
 }
 
 .slide {
@@ -48,22 +84,6 @@ p {
   width: 100%;
 }
 
-/* Estilos para os botões de navegação automática */
-.auto_navegacao {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.auto_navegacao div {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: auto 15px;
-  cursor: pointer;
-}
-
 /* Estilos para os botões de navegação manual */
 .navegacao_Manual {
   display: flex;
@@ -72,30 +92,24 @@ p {
 }
 
 .manual-btn {
-
   width: 10px;
   height: 10px;
   border: 2px solid #080fdf;
   border-radius: 50%;
-  display: inline-block;
-  margin:  auto 7px ;
+  margin: 0 7px;
   cursor: pointer;
-  transition: 1s;
+  transition: background-color 0.3s;
 }
-.manual-btn:hover{
+
+.manual-btn:hover {
   background-color: #080fdf89;
 }
-/* Estilize o botão selecionado */
-.navegacao_Manual:checked::before {
- 
-  margin: -10px 7px ;
-  background-color: #080fdf;
-  border: 2px solid #080fdf;
- 
 
+/* Estilize o botão selecionado */
+input[type="radio"]:checked + .slides .slide {
+  transform: translateX(-100%);
 }
 
-/* Oculte os botões de rádio */
 input[type="radio"] {
   display: none;
 }
