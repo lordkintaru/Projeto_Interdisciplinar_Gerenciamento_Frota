@@ -50,15 +50,14 @@ header {
   }
 
 footer {
-    color: white;
+    color: #5abfa6ff;
     padding: 20px;
     height: 320px;
-    /* min-height: 100%; */
     display: flex;
     flex-direction: column;
     margin-top: 4%;
     background-color: black;
-    color: white;
+
     padding: 20px;
   }
  
@@ -67,7 +66,7 @@ footer {
   }
 
   .redes-sociais a {
-    color: white;
+    color:#5abfa6ff;
     margin-right: 10px;
   }
 
@@ -76,9 +75,13 @@ footer {
   }
 
   .footer-links a {
-    color: white;
+    color: #5abfa6ff;
     text-decoration: none;
     margin-right: 10px;
+  }
+  .img_footer{
+margin:  25px auto;
+    width: 150px;
   }
 
 
