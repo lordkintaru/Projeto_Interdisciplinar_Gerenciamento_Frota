@@ -30,8 +30,26 @@ main {
     width: 30%;
     padding: 8px;
     font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+
   }
-  
+  select option {
+    
+    background-color: #c5ffee;
+    color: #000000;
+  }
+  select option:checked {
+    background-color: #e9fff8;
+    color: rgb(0, 0, 0)000;
+  }
+  select option:hover {
+    
+      background-color: transparent;
+    color: #000000;
+  }
 .selecao, .pesquisa{
   border-radius: 45px;
 margin: 15px;

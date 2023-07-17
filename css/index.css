@@ -31,7 +31,6 @@ p {
   margin: auto;
   width: 70%;
 }
-
 /* Estilos para o container principal */
 .slider {
   margin-bottom: 3%;
@@ -87,11 +86,7 @@ p {
 
   90% {
     transform: translateX(-900%);
-  }
-
-  100% {
-    transform: translateX(-1000%);
-  }
+  } 
 }
 
 .slide {
@@ -102,34 +97,4 @@ p {
 .slide img {
   border-radius: 15px;
   width: 100%;
-}
-
-/* Estilos para os botões de navegação manual */
-.navegacao_Manual {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.manual-btn {
-  width: 10px;
-  height: 10px;
-  border: 2px solid #080fdf;
-  border-radius: 50%;
-  margin: 0 7px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.manual-btn:hover {
-  background-color: #080fdf89;
-}
-
-/* Estilize o botão selecionado */
-input[type="radio"]:checked+.slides .slide {
-  transform: translateX(-100%);
-}
-
-input[type="radio"] {
-  display: none;
 }
