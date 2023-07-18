@@ -14,11 +14,14 @@ main {
 
   th,
   td {
-    text-align: center;
+   
     padding: 8px;
   }
-  
+  tr:hover{
+    transform: scale(1.01);
+  }
   th {
+    
     background-color: #c5ffee;
   }
   
@@ -46,11 +49,26 @@ main {
     color: rgb(0, 0, 0)000;
   }
   select option:hover {
-    
       background-color: transparent;
     color: #000000;
   }
-.selecao, .pesquisa{
+.selecao {
   border-radius: 45px;
 margin: 15px;
+transition:  0.3s ease; 
+
+}
+#barraPesquisa{
+
+  border-radius: 65px;
+  margin: 15px;
+  transition:  0.3s ease; 
+}
+
+#barraPesquisa:hover {
+  transform: scale(1.05);
+  background-color: #e9fff8; /* Cor de fundo no hover */
+}
+.selecao:hover{
+  transform: scale(1.05);
 }
