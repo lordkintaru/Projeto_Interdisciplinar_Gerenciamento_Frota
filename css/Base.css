@@ -1,6 +1,10 @@
-html,
-body {
-  font-family: 'Barlow', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Roboto+Condensed:ital,wght@0,400;1,300&display=swap');
+
+
+
+html {
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
   height: 100%;
   margin: 0;
@@ -15,7 +19,7 @@ body {
 /* Ínicio - Estilização da Header */
 
 header {
-  color: aliceblue;
+  font-family: 'Monomaniac One';
   background: #3d4073;
   display: flex;
   width: 100%;
@@ -23,6 +27,7 @@ header {
 }
 
 #barra-de-navegacao {
+
   justify-content: center;
   margin: 20% auto;
   color: aliceblue;
@@ -31,6 +36,7 @@ header {
 }
 
 #barra-de-navegacao a {
+
   margin: auto;
   text-decoration: none;
   color: aliceblue;
@@ -39,7 +45,8 @@ header {
   font: 18px bolder;
 }
 
-.opcoes_laterais {
+.opcoes_Header {
+
   margin-left: 40%;
 }
 
@@ -54,7 +61,7 @@ header {
 }
 
 footer {
-
+  font-family: 'Monomaniac One';
   text-decoration: none;
   color: #5abfa6ff;
   padding: 20px;
@@ -78,7 +85,7 @@ footer {
   flex-basis: 50%;
 }
 
-.Produtores {
+.Fundadores {
   text-decoration: none;
   color: #5abfa6ff;
   margin-right: 10px;
@@ -87,16 +94,17 @@ footer {
   padding: 10px;
 }
 
-.Produtores a  {
+.Fundadores a  {
   color: #5abfa6ff;
   text-decoration: none;
-
+  margin: 5px ;
 }
-.Produtores i  {
+.Fundadores i  {
+
   margin: 5px ;
 }
 
-.Produtores p {
+.Fundadores p {
   margin: 5px ;
 }
 
@@ -121,6 +129,6 @@ footer {
 }
 
 .img_footer {
-  margin: auto;
-  width: 200px;
+  margin:  5% auto;
+  width: 250px;
 }

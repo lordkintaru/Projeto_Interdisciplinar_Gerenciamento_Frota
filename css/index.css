@@ -33,6 +33,7 @@ p {
 }
 /* Estilos para o container principal */
 .slider {
+  border-radius: 15px;
   margin-bottom: 3%;
   position: relative;
   width: 100%;
@@ -41,8 +42,9 @@ p {
 
 /* Estilos para os slides */
 .slides {
+  border-radius: 15px;
   display: flex;
-  transition: transform 3s ease-in-out;
+  transition: transform 30s ease-in-out;
   animation: autoSlide 60s infinite;
   /* Altere a duração da animação conforme necessário */
 }
@@ -95,6 +97,6 @@ p {
 
 /* Estilos para as imagens dos slides */
 .slide img {
-  border-radius: 15px;
+
   width: 100%;
 }
