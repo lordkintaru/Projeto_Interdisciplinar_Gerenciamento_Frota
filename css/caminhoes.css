@@ -19,6 +19,7 @@ main {
   }
   tr:hover{
     transform: scale(1.01);
+    background-color: #3d407323;
   }
   th {
     
@@ -28,14 +29,14 @@ main {
   tr:nth-child(even) {
     background-color: #e9fff8;
   }
-  
+  tr:nth-child(even):hover{
+    background-color: #3d407323;
+  }
   select {
     width: 30%;
     padding: 8px;
     font-size: 16px;
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     background-color: transparent;
 
   }
@@ -59,12 +60,16 @@ transition:  0.3s ease;
 
 }
 #barraPesquisa{
-
+width: 200px;
+height: 30px;
+font-size: 16px;
   border-radius: 65px;
   margin: 15px;
   transition:  0.3s ease; 
 }
-
+#barraPesquisa::placeholder{
+  text-align: center;
+}
 #barraPesquisa:hover {
   transform: scale(1.05);
   background-color: #e9fff8; /* Cor de fundo no hover */
