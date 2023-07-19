@@ -65,13 +65,11 @@ footer {
   text-decoration: none;
   color: #5abfa6ff;
   padding: 20px;
-  height: 500px;
+  height: 370px;
   display: flex;
   flex-direction: column;
   margin-top: 4%;
   background-color: black;
-
-  padding: 20px;
 }
 
 .footer-content {
@@ -91,7 +89,7 @@ footer {
   margin-right: 10px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+
 }
 
 .Fundadores a  {
@@ -130,7 +128,7 @@ footer {
 
 .img_footer {
   margin:  5% auto;
-  width: 250px;
+  width: 200px;
 }
 
 @media screen and (max-width: 800px) {

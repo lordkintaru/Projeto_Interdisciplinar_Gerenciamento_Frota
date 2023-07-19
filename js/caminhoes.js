@@ -1,7 +1,7 @@
 //Referênciação de elementos do documento HTML para constante; 
 const sltTabelas = document.getElementById("sltTabelas");
 const tbCaminhoes = document.getElementById("tbCaminhoes");
-const barraPesquisa = document.getElementById("barraPesquisa");
+var barraPesquisa = document.getElementById("barraPesquisa")
 
 //Adicionando receptores de eventos;
 document.addEventListener("DOMContentLoaded", analisarTabela);
@@ -20,24 +20,32 @@ function analisarTabela() {
     switch (tabela) {
 
         case "distancia":
-
+             // Esconde o elemento com o ID "barraPesquisa"
+            barraPesquisa.style.display = "none";
 
             break;
 
         case "consumo":
             compararConsumoMedio();
+             // Esconde o elemento com o ID "barraPesquisa"
+            barraPesquisa.style.display = "none";
 
             break;
         case "ranking":
-         
+             // Esconde o elemento com o ID "barraPesquisa"
+             top10Economicos()
+            barraPesquisa.style.display = "none";
 
             break;
 
 
         default:
-            //Acionando a função de criação de tabela;
+            
             criarTabela();
+             // Mostra o elemento com o ID "barraPesquisa"
+            barraPesquisa.style.display = "inline";
 
+   
 
             break;
 
@@ -46,7 +54,7 @@ function analisarTabela() {
 
 //Função de comparação de consumo médio;
 function compararConsumoMedio() {
-    //Criando a varíavel de comparação;
+
     var menorConsumo = 0;
     //Varíavel de de posição;
     var posicao = 0;
@@ -82,7 +90,8 @@ function compararConsumoMedio() {
 //Função de criação de tabela e barra de pesquisa;
 
 function criarTabela() {
-    var inputValor = document.getElementById("barraPesquisa").value.toUpperCase();
+
+  inputValor =  barraPesquisa.value.toUpperCase();
     var tabela = document.getElementById("tbCaminhoes");
     tabela.innerHTML = ""; // Limpa a tabela anterior (se houver)
 
@@ -102,3 +111,44 @@ function criarTabela() {
     }
     // insertCell(): cria uma nova célula e a insere na linha especificada. Nesse caso, estamos criando quatro células para cada linha da tabela, representando cada uma das colunas. Em seguida, usamos a propriedade innerHTML dessas células para definir o conteúdo que será exibido em cada célula da tabela. Isso é o que preenche a tabela com os dados do vetor vetorPlaca, vetorKM e vetorConsumo.
 }
+
+function top10Economicos() {
+    // aqui cria um vetor novo
+    var caminhoes = [];
+    for (var i = 0; i < vetPlaca.length; i++) {
+      caminhoes.push({
+        placa: vetPlaca[i],
+        distanciaPercorrida: vetKM[i],
+        combustivelConsumido: vetConsumo[i],
+        consumoMedio: vetKM[i] / vetConsumo[i]
+      });
+    }
+  
+    // Ordenar os caminhões com base no consumo médio (do menor para o maior)
+    caminhoes.sort(function(a, b) {
+        // na verdade aqui ele compara um consumo com outro
+      return a.consumoMedio - b.consumoMedio;
+    });
+  
+    // Selecionar e limita os 10 caminhões mais econômicos
+    var top10Caminhoes = caminhoes.slice(0, 10);
+  
+    // Preencher a tabela HTML com as informações dos 10 caminhões mais econômicos
+    var tabela = document.getElementById("tbCaminhoes");
+    tabela.innerHTML = "";
+  
+    for (var j = 0; j < top10Caminhoes.length; j++) {
+      var caminhao = top10Caminhoes[j];
+      var novaLinha = tabela.insertRow();
+      var Placa = novaLinha.insertCell(0);
+      var quilometro = novaLinha.insertCell(1);
+      var Consumo = novaLinha.insertCell(2);
+      var consumoMedio = novaLinha.insertCell(3);
+  
+      Placa.innerHTML = caminhao.placa;
+      quilometro.innerHTML = caminhao.distanciaPercorrida;
+      Consumo.innerHTML = caminhao.combustivelConsumido;
+      consumoMedio.innerHTML = caminhao.consumoMedio.toFixed(2);
+    }
+  }
+  
