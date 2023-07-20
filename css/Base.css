@@ -1,88 +1,164 @@
 
-html, body {
-    font-family: 'Barlow', sans-serif;
-    text-align: center;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Roboto+Condensed:ital,wght@0,400;1,300&display=swap');
+
+
+
+html {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .Logo {
-margin: 20px;
+  margin: 20px;
 
 }
+
 /* Ínicio - Estilização da Header */
 
 header {
-    color: aliceblue;
-    background: #3d4073;
-    display: flex;
-    width: 100%;
-    height: 150px;
+  font-family: 'Monomaniac One';
+  background: #3d4073;
+  display: flex;
+  width: 100%;
+  height: 150px;
 }
+
 #barra-de-navegacao {
-    justify-content: center;
-    margin: 20% auto;
-    color: aliceblue;
-    display: flex;
-  
+
+  justify-content: center;
+  margin: 20% auto;
+  color: aliceblue;
+  display: flex;
+
 }
 
 #barra-de-navegacao a {
-    margin: auto;
-    text-decoration: none;
-    color: aliceblue;
-    display: inline-flex;
-    padding: 10px;
-    font: 18px bolder;
-}
-.opcoes_laterais{
-   margin-left: 40%; 
-}
-.container {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .content {
-    flex: 1;
-  }
+  margin: auto;
+  text-decoration: none;
+  color: aliceblue;
+  display: inline-flex;
+  padding: 10px;
+  font: 18px bolder;
+}
+
+.opcoes_Header {
+
+  margin-left: 40%;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
 
 footer {
-    color: #5abfa6ff;
-    padding: 20px;
-    height: 320px;
-    display: flex;
+  font-family: 'Monomaniac One';
+  text-decoration: none;
+  color: #5abfa6ff;
+  padding: 20px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+  background-color: black;
+}
+
+.footer-content {
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  margin: 5px;
+  flex-basis: 50%;
+}
+
+.Fundadores {
+  text-decoration: none;
+  color: #5abfa6ff;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.Fundadores a  {
+  color: #5abfa6ff;
+  text-decoration: none;
+  margin: 5px ;
+}
+.Fundadores i  {
+
+  margin: 5px ;
+}
+
+.Fundadores p {
+  margin: 5px ;
+}
+
+
+.footer-texto p {
+  margin: 5px 0;
+}
+
+.redes-sociais a {
+  color: #5abfa6ff;
+  margin-right: 10px;
+}
+
+.contato p {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #5abfa6ff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.img_footer {
+  margin:  5% auto;
+  width: 200px;
+}
+
+@media screen and (max-width: 800px) {
+  header {
     flex-direction: column;
-    margin-top: 4%;
-    background-color: black;
-
-    padding: 20px;
+    height: auto;
   }
- 
-  .footer-texto p {
-    margin:5px 0;
-  }
-
-  .redes-sociais a {
-    color:#5abfa6ff;
-    margin-right: 10px;
+.Logo{
+  margin: 0 auto;
+  width: 40%;
+}
+  .opcoes_Header {
+    margin: auto;
   }
 
-  .contato p {
-    margin: 5px 0;
+  #barra-de-navegacao {
+    flex-direction: column;
   }
 
-  .footer-links a {
-    color: #5abfa6ff;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-  .img_footer{
-margin:  25px auto;
-    width: 150px;
+  footer {
+    height: 100%;
+    margin: auto;
+    padding: 10px;
   }
 
+  .footer-content {
+    flex-direction: column;
+  }
 
-
+  .column {
+    flex-basis: 100%;
+  }
+}

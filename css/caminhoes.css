@@ -14,25 +14,66 @@ main {
 
   th,
   td {
-    text-align: center;
+   
     padding: 8px;
   }
-  
+  tr:hover{
+    transform: scale(1.01);
+    background-color: #3d407323;
+  }
   th {
+    
     background-color: #c5ffee;
   }
   
   tr:nth-child(even) {
     background-color: #e9fff8;
   }
-  
+  tr:nth-child(even):hover{
+    background-color: #3d407323;
+  }
   select {
     width: 30%;
     padding: 8px;
     font-size: 16px;
+    appearance: none;
+    background-color: transparent;
+
   }
-  
-.selecao, .pesquisa{
+  select option {
+    
+    background-color: #c5ffee;
+    color: #000000;
+  }
+  select option:checked {
+    background-color: #e9fff8;
+    color: rgb(0, 0, 0)000;
+  }
+  select option:hover {
+      background-color: transparent;
+    color: #000000;
+  }
+.selecao {
   border-radius: 45px;
 margin: 15px;
+transition:  0.3s ease; 
+
+}
+#barraPesquisa{
+width: 200px;
+height: 20px;
+font-size: 16px;
+  border-radius: 15px;
+  margin: 15px;
+  transition:  0.3s ease; 
+}
+#barraPesquisa::placeholder{
+  text-align: center;
+}
+#barraPesquisa:hover {
+  transform: scale(1.05);
+  background-color: #e9fff8; /* Cor de fundo no hover */
+}
+.selecao:hover{
+  transform: scale(1.05);
 }
