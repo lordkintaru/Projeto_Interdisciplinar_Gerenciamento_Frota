@@ -7,7 +7,7 @@ var vetConsumo = [87.2, 78.5, 21.6, 114.5, 168.5, 180.5, 34.0, 186.2, 196.2, 48.
 
 //Criação de um vetor de consumo médio de litros;
 var vetMedia= [];
-
+//Estrutura de repetição para a inserção dos valores no vetor;
 for (let i = 0; i< vetConsumo
     .length; i++) {
 
@@ -16,5 +16,27 @@ for (let i = 0; i< vetConsumo
 
 }
 
+//Criação do vetor da distância total de cada caminhão;
+var vetDistancia = [];
+//Variável somadora;
+var somadora = 0;
+
+//Estrutura de repetição para a inserção dos valores no vetor;
+for (let index = 0; index < vetPlaca.length; index++) {
+
+    //Estrutura de repetição comparadora e somadora;
+  for (let i = 0; i < vetPlaca.length; i++) {
+
+    if (vetPlaca[index] == vetPlaca[i]) {
+
+      somadora += vetKM[i];
+
+    }
+  }
+  //Inserção do valor no vetor;
+  vetDistancia.push(somadora);
+  //Zerando a varíavel somadora para a próxima repetição;
+  somadora = 0;
+}
 
 
