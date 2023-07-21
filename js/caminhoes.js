@@ -24,14 +24,16 @@ function analisarTabela() {
   switch (tabela) {
 
     case "distancia":
-      // Esconde o elemento com o ID "barraPesquisa"
+      // Esconde o elemento com o ID "barraPesquisa";
       pesquisa.style.display = "none";
-      table.style.display = "none";
+      
+      //Acionando a função;
+      compararDistancia()
 
       break;
 
     case "consumo":
-      // Esconde o elemento com o ID "barraPesquisa"
+      // Esconde o elemento com o ID "barraPesquisa";
       pesquisa.style.display = "none";
 
       //Acionando a função;
@@ -40,7 +42,7 @@ function analisarTabela() {
 
       break;
     case "ranking":
-      // Esconde o elemento com o ID "barraPesquisa"
+      // Esconde o elemento com o ID "barraPesquisa";
       pesquisa.style.display = "none";
 
       //Acionando a função;
@@ -51,7 +53,7 @@ function analisarTabela() {
 
 
     default:
-      // Mostra o elemento com o ID "barraPesquisa"
+      // Mostra o elemento com o ID "barraPesquisa";
       pesquisa.style.display = "inline";
 
       //Acionando a função;
@@ -172,12 +174,13 @@ function compararDistancia() {
   for (let i = 0; i < vetDistancia.length; i++) {
 
     if (maiorDistancia < vetDistancia[i]) {
-      menorConsumo = vetDistancia[i];
+      maiorDistancia = vetDistancia[i];
       posicao = i;
     }
-    
+
   }
- 
+  //Necessário realizar a saída da função;
+  alert(`O caminhão ${vetPlaca[posicao]} foi o que mais percorreu distância, sendo ao total ${maiorDistancia}KMs.`)
 
 
 }
