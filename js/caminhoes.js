@@ -1,16 +1,18 @@
 //Referênciação de elementos do documento HTML para constante; 
 const sltTabelas = document.getElementById("sltTabelas");
 const tbCaminhoes = document.getElementById("tbCaminhoes");
-var barraPesquisa = document.getElementById("barraPesquisa")
-var table = document.getElementById("table");
-var pesquisa = document.getElementById("pesquisa");
+const barraPesquisa = document.getElementById("barraPesquisa")
+const table = document.getElementById("table");
+const pesquisa = document.getElementById("pesquisa");
+const diagDistancia = document.getElementById("diagDistancia");
+
 
 //Adicionando receptores de eventos;
 document.addEventListener("DOMContentLoaded", analisarTabela);
 sltTabelas.addEventListener("change", analisarTabela);
 
-
-
+//Varíavel para segurar o valor;
+var ancora = "";
 
 //Função de tabela;
 function analisarTabela() {
@@ -24,15 +26,14 @@ function analisarTabela() {
   switch (tabela) {
 
     case "distancia":
-      // Esconde o elemento com o ID "barraPesquisa";
-      pesquisa.style.display = "none";
-      
       //Acionando a função;
       compararDistancia()
 
       break;
 
     case "consumo":
+      //Variavel a qual segura o valor;
+      ancora = sltTabelas.value;
       // Esconde o elemento com o ID "barraPesquisa";
       pesquisa.style.display = "none";
 
@@ -42,6 +43,8 @@ function analisarTabela() {
 
       break;
     case "ranking":
+      //Variavel a qual segura o valor;
+      ancora = sltTabelas.value;
       // Esconde o elemento com o ID "barraPesquisa";
       pesquisa.style.display = "none";
 
@@ -53,6 +56,8 @@ function analisarTabela() {
 
 
     default:
+      //Variavel a qual segura o valor;
+      ancora = sltTabelas.value;
       // Mostra o elemento com o ID "barraPesquisa";
       pesquisa.style.display = "inline";
 
@@ -167,6 +172,11 @@ function calcularEconomicos() {
 
 function compararDistancia() {
 
+  //Mantendo o mesmo valor anterior;
+  sltTabelas.value = ancora;
+  analisarTabela();
+
+  //Varíavel de comparação;
   var maiorDistancia = 0;
   //Varíavel de de posição;
   var posicao = 0;
@@ -179,8 +189,11 @@ function compararDistancia() {
     }
 
   }
-  //Necessário realizar a saída da função;
-  alert(`O caminhão ${vetPlaca[posicao]} foi o que mais percorreu distância, sendo ao total ${maiorDistancia}KMs.`)
+
+  //Adiconando o resultado da comparação;
+  diagDistancia.innerHTML = `O caminhão ${vetPlaca[posicao]} foi o que mais percorreu distância, sendo ao total ${maiorDistancia} Kms.`
+  //Mostrando o dialog;
+  diagDistancia.showModal();
 
 
 }
