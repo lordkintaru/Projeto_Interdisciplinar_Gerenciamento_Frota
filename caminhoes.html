@@ -9,14 +9,14 @@
     <link rel="icon" href="./imagens/icone.png" title="caminhões ícones">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/caminhoes.css">
-    <link rel="stylesheet" href="./css/Base.css">
+    <link rel="stylesheet" href="./css/base.css">
 
     <title>Caminhões</title>
 </head>
 
 <body>
     <header>
-        <img class="Logo" src="imagens/Logo.png" alt="">
+        <img class="logo" src="imagens/Logo.png" alt="">
         <section class="opcoes_Header">
 
             <nav>
@@ -44,7 +44,7 @@
             </select>
             <div id= "pesquisa" class="pesquisa">
                 <p>Pesquisar placa do Caminhão</p>
-                <input type="text" id="barraPesquisa" placeholder=" PLACA DO CAMINHÃO" oninput="criarTabela()">
+                <input type="text" id="barraPesquisa" placeholder="Digite aqui..." oninput="criarTabela()">
             </div>
             <table>
                 <thead>
@@ -61,7 +61,8 @@
             </table>
 
             <dialog id="diagDistancia">
-                
+                <p id="outDistancia"></p>
+                <button id="btFecharDistancia">Fechar</button>
             </dialog>
         </div>
 
@@ -95,7 +96,7 @@
                     <a href="caminhoes.html">Caminhões</a>
                     <a href="index.html">Home</a>
                 </div>
-                <div class="Fundadores">
+                <div class="fundadores">
                     <p>Fundadores</p>
                     <a href="#"><i class="fab fa-instagram"></i>Igor Massi</a>
                     <a href="#"><i class="fab fa-instagram"></i>Isabelly Zanotti</a>

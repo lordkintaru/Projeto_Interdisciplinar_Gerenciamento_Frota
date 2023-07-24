@@ -1,15 +1,20 @@
+/*Versão da página caminhões, versão 1.0, sendo a finalização dela para a a entrega dos arquivos
+Desenvolvida por: Igor e Alexandre*/
+
 //Referênciação de elementos do documento HTML para constante; 
 const sltTabelas = document.getElementById("sltTabelas");
 const tbCaminhoes = document.getElementById("tbCaminhoes");
-const barraPesquisa = document.getElementById("barraPesquisa")
+const barraPesquisa = document.getElementById("barraPesquisa");
 const table = document.getElementById("table");
 const pesquisa = document.getElementById("pesquisa");
 const diagDistancia = document.getElementById("diagDistancia");
-
+const outDistancia = document.getElementById("outDistancia");
+const btFecharDistancia = document.getElementById("btFecharDistancia");
 
 //Adicionando receptores de eventos;
 document.addEventListener("DOMContentLoaded", analisarTabela);
 sltTabelas.addEventListener("change", analisarTabela);
+btFecharDistancia.addEventListener("click", fecharDialog);
 
 //Varíavel para segurar o valor;
 var ancora = "";
@@ -145,6 +150,7 @@ function calcularEconomicos() {
   // Ordenar os caminhões com base no consumo médio (do menor para o maior);
   vetCaminhoes.sort(function (a, b) {
     // na verdade aqui ele compara um consumo com outro;
+
     return a.consumoMedio - b.consumoMedio;
   });
 
@@ -191,9 +197,13 @@ function compararDistancia() {
   }
 
   //Adiconando o resultado da comparação;
-  diagDistancia.innerHTML = `O caminhão ${vetPlaca[posicao]} foi o que mais percorreu distância, sendo ao total ${maiorDistancia} Kms.`
+  outDistancia.innerHTML = `O caminhão ${vetPlaca[posicao]} foi o que mais percorreu distância, sendo ao total ${maiorDistancia} Kms.`
   //Mostrando o dialog;
   diagDistancia.showModal();
 
 
+}
+
+function fecharDialog(){
+  diagDistancia.close();
 }

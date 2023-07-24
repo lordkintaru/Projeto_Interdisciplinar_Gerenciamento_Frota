@@ -84,7 +84,7 @@ footer {
   flex-basis: 50%;
 }
 
-.Fundadores {
+.fundadores {
   text-decoration: none;
   color: #5abfa6ff;
   margin-right: 10px;
@@ -93,17 +93,17 @@ footer {
 
 }
 
-.Fundadores a  {
+.fundadores a  {
   color: #5abfa6ff;
   text-decoration: none;
   margin: 5px ;
 }
-.Fundadores i  {
+.fundadores i  {
 
   margin: 5px ;
 }
 
-.Fundadores p {
+.fundadores p {
   margin: 5px ;
 }
 
@@ -137,7 +137,7 @@ footer {
     flex-direction: column;
     height: auto;
   }
-.Logo{
+.logo{
   margin: 0 auto;
   width: 40%;
 }

@@ -3,11 +3,13 @@
       padding: 2% auto;
       margin-top: 100px;
     
+    
       }
       
       label {
         display: block;
         margin-bottom: 10px;
+        font-size: 20px;
       }
       
       input[type="text"],
@@ -16,6 +18,7 @@
         width: 40%;
         padding: 5px;
         margin-bottom: 10px;
+        border-radius: 25px;
       }
       
       input[type="submit"] {
@@ -29,3 +32,16 @@
       input[type="submit"]:hover {
         background-color: #555;
       }
+      .formulario{
+        border: none 5px ;
+        border-radius: 25px;
+        padding: 50px 0px 50px 0px;
+     
+        background-color: #eeeeee
+
+      }
+      form{
+        padding: 0px 500px 0px 500px;
+    
+      }
+      

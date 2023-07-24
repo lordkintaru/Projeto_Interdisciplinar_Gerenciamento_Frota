@@ -78,13 +78,29 @@ font-size: 16px;
   transform: scale(1.05);
 }
 #diagDistancia::backdrop{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   
 }
 #diagDistancia{
- 
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
   border: solid 3px;
   border-color: #c5ffee;
   border-radius: 45px;
   width: 50%;
+}
+#diagDistancia p{
+  font-size: 20px;
+  padding-bottom: 10px;
+
+}
+#btFecharDistancia{
+  background-color: #c5ffee;
+  border: solid 1px;
+  border-radius: 45px;
+  padding: 5px;
+  font: bolder;
+  
+}
+#btFecharDistancia:hover{
+  transform: scale(1.05);
 }
