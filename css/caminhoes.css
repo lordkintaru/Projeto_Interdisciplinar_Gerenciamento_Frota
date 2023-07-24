@@ -83,7 +83,7 @@ font-size: 16px;
 }
 #diagDistancia{
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
-  border: solid 3px;
+  border: none;
   border-color: #c5ffee;
   border-radius: 45px;
   width: 50%;
@@ -94,13 +94,41 @@ font-size: 16px;
 
 }
 #btFecharDistancia{
+   transition: 0.2s;
   background-color: #c5ffee;
-  border: solid 1px;
+  border: none;
   border-radius: 45px;
   padding: 5px;
   font: bolder;
   
 }
 #btFecharDistancia:hover{
+  color: white;
+background-color: #3d4073;
   transform: scale(1.05);
+}
+@media (max-width: 800px) {
+  main {
+    padding: 2% 1%;
+  }
+  
+  table {
+    margin: 0 auto;
+    width: 60%;
+  }
+  
+  select {
+    width: 50%;
+  }
+    select option {
+      width: 40%;
+    }
+  
+  #barraPesquisa {
+    width: 30%;
+  }
+  
+  #diagDistancia {
+    width: 50%;
+  }
 }
