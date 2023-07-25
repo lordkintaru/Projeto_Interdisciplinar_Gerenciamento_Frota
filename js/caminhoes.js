@@ -7,14 +7,14 @@ const tbCaminhoes = document.getElementById("tbCaminhoes");
 const barraPesquisa = document.getElementById("barraPesquisa");
 const table = document.getElementById("table");
 const pesquisa = document.getElementById("pesquisa");
-const diagDistancia = document.getElementById("diagDistancia");
-const outDistancia = document.getElementById("outDistancia");
-const btFecharDistancia = document.getElementById("btFecharDistancia");
+const diagResultado = document.getElementById("diagResultado");
+const outResultado = document.getElementById("outResultado");
+const btFecharResultado = document.getElementById("btFecharResultado");
 
 //Adicionando receptores de eventos;
 document.addEventListener("DOMContentLoaded", analisarTabela);
 sltTabelas.addEventListener("change", analisarTabela);
-btFecharDistancia.addEventListener("click", fecharDialog);
+btFecharResultado.addEventListener("click", fecharDialog);
 
 //Varíavel para segurar o valor;
 var ancora = "";
@@ -37,11 +37,7 @@ function analisarTabela() {
       break;
 
     case "consumo":
-      //Variavel a qual segura o valor;
-      ancora = sltTabelas.value;
-      // Esconde o elemento com o ID "barraPesquisa";
-      pesquisa.style.display = "none";
-
+    
       //Acionando a função;
       compararConsumoMedio();
 
@@ -76,6 +72,10 @@ function analisarTabela() {
 //Função de comparação de consumo médio;
 function compararConsumoMedio() {
 
+  //Mantendo o mesmo valor anterior;
+  sltTabelas.value = ancora;
+  analisarTabela();
+
   var menorConsumo = 0;
   //Varíavel de de posição;
   var posicao = 0;
@@ -87,25 +87,9 @@ function compararConsumoMedio() {
       posicao = i;
     }
   }
-  //Criação de váriaveis criadoras de elementos; 
-  var placa = document.createElement("td");
-  var km = document.createElement("td");
-  var consumo = document.createElement("td");
-  var media = document.createElement("td");
-  var tr = document.createElement("tr");
-
-  //Atribuindo os textos para as varíaveis;
-  placa.innerHTML = vetPlaca[posicao];
-  km.innerHTML = vetKM[posicao];
-  consumo.innerHTML = vetConsumo[posicao];
-  media.innerHTML = vetMedia[posicao].toFixed(2);
-
-  //Organização para a inserção da tabela no HTML;
-  tr.appendChild(placa);
-  tr.appendChild(km);
-  tr.appendChild(consumo);
-  tr.appendChild(media);
-  tbCaminhoes.appendChild(tr);
+  //Saída das informações através do dialog; 
+  outResultado.innerHTML = `A viagem a qual possui o menor consumo médio de gasolina foi o caminhão ${vetPlaca[posicao]}, percorrendo ${vetKM[posicao]} Kms ultilizando ${vetConsumo[posicao]} L de gasolina, sendo assim seu consumo médio de ${vetMedia[posicao].toFixed(2)} Kms/L.`
+  diagResultado.showModal();
 }
 
 //Função de criação de tabela e barra de pesquisa;
@@ -197,13 +181,13 @@ function compararDistancia() {
   }
 
   //Adiconando o resultado da comparação;
-  outDistancia.innerHTML = `O caminhão ${vetPlaca[posicao]} foi o que mais percorreu distância, sendo ao total ${maiorDistancia} Kms.`
+  outResultado.innerHTML = `O caminhão ${vetPlaca[posicao]} foi o que mais percorreu distância, sendo ao total ${maiorDistancia} Kms.`
   //Mostrando o dialog;
-  diagDistancia.showModal();
+  diagResultado.showModal();
 
 
 }
 
 function fecharDialog(){
-  diagDistancia.close();
+  diagResultado.close();
 }

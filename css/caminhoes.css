@@ -77,23 +77,23 @@ font-size: 16px;
 .selecao:hover{
   transform: scale(1.05);
 }
-#diagDistancia::backdrop{
+#diagResultado::backdrop{
   background-color: rgba(0, 0, 0, 0.8);
   
 }
-#diagDistancia{
+#diagResultado{
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
   border: none;
   border-color: #c5ffee;
   border-radius: 45px;
   width: 50%;
 }
-#diagDistancia p{
+#diagResultado p{
   font-size: 20px;
   padding-bottom: 10px;
 
 }
-#btFecharDistancia{
+#btFecharResultado{
    transition: 0.2s;
   background-color: #c5ffee;
   border: none;
@@ -102,7 +102,7 @@ font-size: 16px;
   font: bolder;
   
 }
-#btFecharDistancia:hover{
+#btFecharResultado:hover{
   color: white;
 background-color: #3d4073;
   transform: scale(1.05);
