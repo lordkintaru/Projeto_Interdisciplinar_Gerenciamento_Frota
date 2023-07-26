@@ -168,6 +168,7 @@ function compararDistancia() {
 
   //Varíavel de comparação;
   var maiorDistancia = 0;
+  
   //Varíavel de de posição;
   var posicao = 0;
   //Estrutura de repetição com comparação;

@@ -62,17 +62,21 @@ header {
 
 /* Ínicio - Estilização do Footer */
 footer {
+  margin-top: 4%;
   font-family: 'Monomaniac One';
   text-decoration: none;
   color: #5abfa6ff;
   padding: 20px;
-  height: 370px;
+  height: 315px;
   display: flex;
   flex-direction: column;
-  margin-top: 4%;
+ 
   background-color: black;
 }
-
+.img_footer {
+  margin:  5% auto;
+  width: 100px;
+}
 .footer-content {
   margin-top: 1%;
   display: flex;
@@ -85,6 +89,7 @@ footer {
 }
 
 .fundadores {
+ 
   text-decoration: none;
   color: #5abfa6ff;
   margin-right: 10px;
@@ -98,14 +103,7 @@ footer {
   text-decoration: none;
   margin: 5px ;
 }
-.fundadores i  {
 
-  margin: 5px ;
-}
-
-.fundadores p {
-  margin: 5px ;
-}
 
 
 .footer-texto p {
@@ -127,10 +125,7 @@ footer {
   margin-right: 10px;
 }
 
-.img_footer {
-  margin:  5% auto;
-  width: 200px;
-}
+
 
 @media screen and (max-width: 800px) {
   header {

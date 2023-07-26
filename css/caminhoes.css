@@ -1,133 +1,153 @@
-
 main {
   padding: 2% auto;
 
-  }
-  
-  table {
-    background-color: #3d407300;
-    border-radius: 25px;
-    margin:  0 auto;
-    border-collapse: collapse;
-    width: 950px;
-  }
+}
 
-  th,
-  td {
-   
-    padding: 8px;
-  }
-  tr:hover{
-    transform: scale(1.01);
-    background-color: #3d407323;
-  }
-  th {
-    
-    background-color: #c5ffee;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #e9fff8;
-  }
-  tr:nth-child(even):hover{
-    background-color: #3d407323;
-  }
-  select {
-    width: 30%;
-    padding: 8px;
-    font-size: 16px;
-    appearance: none;
-    background-color: transparent;
+table {
+  background-color: #3d407300;
+  border-radius: 25px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 950px;
+}
 
-  }
-  select option {
-    
-    background-color: #c5ffee;
-    color: #000000;
-  }
-  select option:checked {
-    background-color: #e9fff8;
-    color: rgb(0, 0, 0)000;
-  }
-  select option:hover {
-      background-color: transparent;
-    color: #000000;
-  }
+th,
+td {
+
+  padding: 8px;
+}
+
+tr:hover {
+  transform: scale(1.01);
+  background-color: #3d407323;
+}
+
+th {
+
+  background-color: #c5ffee;
+}
+
+tr:nth-child(even) {
+  background-color: #e9fff8;
+}
+
+tr:nth-child(even):hover {
+  background-color: #3d407323;
+}
+
+select {
+  appearance: none; 
+  width: 30%;
+  padding: 8px;
+  font-size: 16px;
+ border: 0.2px solid;
+  background-color: transparent;
+ 
+}
+select:hover{
+  background-color: #e9fff8;
+}
+select option {
+
+  background-color: #c5ffee;
+  color: #000000;
+}
+
+select option:checked {
+  background-color: #e9fff8;
+  color: rgb(0, 0, 0)000;
+}
+
+
+
 .selecao {
   border-radius: 45px;
-margin: 15px;
-transition:  0.3s ease; 
+  margin: 15px;
+  transition: 0.3s ease;
 
 }
-#barraPesquisa{
-width: 200px;
-height: 20px;
-font-size: 16px;
+
+#barraPesquisa {
+  border: 0.2px solid;
+  width: 200px;
+  height: 20px;
+  font-size: 16px;
   border-radius: 15px;
   margin: 15px;
-  transition:  0.3s ease; 
+  transition: 0.3s ease;
 }
-#barraPesquisa::placeholder{
+
+#barraPesquisa::placeholder {
   text-align: center;
 }
+
 #barraPesquisa:hover {
   transform: scale(1.05);
-  background-color: #e9fff8; /* Cor de fundo no hover */
+  background-color: #e9fff8;
+  /* Cor de fundo no hover */
 }
-.selecao:hover{
+
+.selecao:hover {
   transform: scale(1.05);
 }
-#diagResultado::backdrop{
+
+#diagResultado::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
-  
+
 }
-#diagResultado{
+
+#diagResultado {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
   border: none;
   border-color: #c5ffee;
   border-radius: 45px;
   width: 50%;
 }
-#diagResultado p{
+
+#diagResultado p {
   font-size: 20px;
   padding-bottom: 10px;
 
 }
-#btFecharResultado{
-   transition: 0.2s;
+
+#btFecharResultado {
+  transition: 0.2s;
   background-color: #c5ffee;
   border: none;
   border-radius: 45px;
   padding: 5px;
   font: bolder;
-  
+
 }
-#btFecharResultado:hover{
+
+#btFecharResultado:hover {
   color: white;
-background-color: #3d4073;
+  background-color: #3d4073;
   transform: scale(1.05);
 }
+
 @media (max-width: 800px) {
   main {
     padding: 2% 1%;
   }
-  
+
   table {
     margin: 0 auto;
     width: 60%;
   }
-  
+
   select {
     width: 50%;
   }
-    select option {
-      width: 40%;
-    }
-  
+
+  select option {
+    width: 40%;
+  }
+
   #barraPesquisa {
     width: 30%;
   }
-  
+
   #diagDistancia {
     width: 50%;
   }
